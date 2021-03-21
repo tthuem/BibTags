@@ -17,8 +17,10 @@
 }
 
 % hack as title page is supposed to be used in againframe and the handout misses footer otherwise
-\handoutonly{\maketitle}
-\slideonly{\begin{frame}[label=titleslide]\titlepage\end{frame}}
+
+% TODO: Commented out, otherwise the document does not compile
+%\handoutonly{\maketitle}
+%\slideonly{\begin{frame}[label=titleslide]\titlepage\end{frame}}
 
 % SET colors
 %\setbeamercolor{headerfooter}{fg=black, bg=lightgray!50}
@@ -34,15 +36,11 @@
 }
 
 \setbeamertemplate{frametitle}
-{
-	\vskip10pt
-	\begin{mdframed}[linewidth=0pt, leftmargin = 0pt, innerleftmargin = 0pt,apptotikzsetting={
-			\tikzset{mdfbackground/.append style={fill=white,fill opacity=0}}}]           
-		\begin{tikzpicture}
-		\node[minimum height = 20pt, text width=0.7\paperwidth] (main){\Huge\textbf{\insertframetitle{} \phantom{XS,g/}}};
-
-		%\node[minimum height = 20pt, below = -8pt of main, text width=0.7\paperwidth]{\large\color{darkgray}\insertframesubtitle{} \phantom{XS,g/}};
-		\end{tikzpicture}  
-	\end{mdframed}
-	\vskip5pt
+{    
+	\null
+	\begin{tikzpicture}
+		\node[anchor = north west, minimum height = 32pt, text depth = 0, yshift = -10pt](main){\Huge\color{black}\textbf{\insertframetitle{}}};
+		\node[anchor = north west, minimum height = 20pt, text depth = 0, below right = 0pt and 0pt of main.south west]{\large\color{darkgray}\insertframesubtitle{}};
+	\end{tikzpicture}  
 }
+

@@ -1,3 +1,8 @@
+%\documentclass[8pt, t, aspectratio=169, setspace, fixcmex, handout, xcolor={dvipsnames,table}]{beamer}
+
+\documentclass[8pt, aspectratio=169, table, setspace, fixcmex]{beamer}
+%\documentclass[8pt, aspectratio=169, table, setspace, fixcmex, handout]{beamer}
+
 \input{header}
 \newcommand{\insertuulmtitle}{\input{title}}
 \graphicspath{{pics/}}
@@ -6,6 +11,9 @@
 \title{Layout Templates}
 \subtitle{Use for Clone-and-Own}
 %\renewcommand{\titleBackgroundImage}{../path/to/picture}
+
+%TODO: Remove the next line (testing)
+\usepackage{lipsum}
 
 \begin{document}
 
@@ -55,9 +63,23 @@
 % list of things already fixed in the template
 \subsection{DONE}
 \begin{frame}{\insertsubsection}
+	\framesubtitle{Test}
 	\begin{itemize}
 		\item Make footer more readable
 	\end{itemize}
 \end{frame}
 
+%TODO Testing
+
+\begin{frame}
+	\frametitle{I am a very long title title title title title title title title}
+	\framesubtitle{I am a very long subtitle subtitle subtitle subtitle subtitle subtitle}
+	
+	\lipsum
+\end{frame}
+\begin{frame}
+	\frametitle{I am a very long title title title title title title title title}
+	\framesubtitle{I am a very long subtitle subtitle subtitle subtitle subtitle subtitle}
+	
+\end{frame}
 \end{document}
